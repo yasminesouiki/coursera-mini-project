@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.75em; /* 75% plus grand que le texte factice */
+}
+
+.container {
+    padding: 15px;
+}
+
+.section {
+    position: relative;
+    background-color: #f4f4f4; /* Fond de la section */
+    border: 1px solid black;
+    margin: 15px;
+    padding: 40px 15px 15px 15px;
+    float: left;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid black;
+    padding: 5px 10px;
+    font-size: 1.25em; /* 25% plus grand que le texte factice */
+}
+
+/* Couleurs des titres uniquement */
+#chicken .title {
+    background-color: #FFA500; /* Orange */
+}
+
+#beef .title {
+    background-color: #8B0000; /* Rouge foncé */
+    color: white; /* Texte blanc pour meilleure lisibilité */
+}
+
+#sushi .title {
+    background-color: #2E8B57; /* Vert de mer */
+    color: white; /* Texte blanc pour meilleure lisibilité */
+}
+
+/* Desktop view */
+@media (min-width: 992px) {
+    .section {
+        width: calc(33.33% - 30px);
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+    #chicken, #beef {
+        width: calc(50% - 30px);
+    }
+    #sushi {
+        width: calc(100% - 30px);
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .section {
+        width: calc(100% - 30px);
+    }
+}
